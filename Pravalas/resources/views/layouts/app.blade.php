@@ -21,12 +21,12 @@
             </li>
         </ul>
         <ul class="flex items-center">
-            <li class="grid2">
-                <div class="container d-flex flex-column align-items-center justify-content-center">
-                    <button class="btn btn-outline-primary btn-custom-outline-primary btn-custom">SUBCODE 1</button>
-                    <button> Prisijungti</button>
-                    <button>Registruotis</button>
-                </div>
+            <li>
+
+                <button>Įsiminti knygą</button>
+                <button>Prisijungti</button>
+                <button>Registruotis</button>
+
             </li>
 
         </ul>
