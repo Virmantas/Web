@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PravalasNEBUS</title>
+    <title>Pravalas</title>
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
@@ -16,7 +16,7 @@
         <ul class="flex items-center">
             <li class="">
                 <textarea style="border:3px; border-style:solid; border-color:rgb(165, 7, 7); resize:none"
-                    name="Surasti Knygą" id="" cols="50" rows="1"> Ieškoti knygos</textarea>
+                    name="Surasti Knygą" id="" cols="50" rows="1"> Ieškoti pagal knygos pavadinimą, autorių..</textarea>
                 <button style="margin-left:-2%">
                     <img src="search.png" alt="" width="33.5px" height="33.5px">
                 </button>
