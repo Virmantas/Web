@@ -16,7 +16,7 @@
         <ul class="flex items-center">
             <li class="">
                 <textarea style="border:3px; border-style:solid; border-color:rgb(165, 7, 7); resize:none"
-                    name="Surasti Knygą" id="" cols="50" rows="1"> Ieškoti pagal knygos pavadinimą, autorių..</textarea>
+                    name="Surasti Knygą" id="" cols="50" rows="1"> Ieškoti knygos</textarea>
                 <button style="margin-left:-2%">
                     <img src="search.png" alt="" width="33.5px" height="33.5px">
                 </button>
@@ -28,8 +28,10 @@
             </button>
             <li style="justify-items: flex-end">
                 <button style=" background-color: rgb(165, 7, 7);color: white; width:90%">Prisijungti</button>
-                <button style=" background-color: rgb(165, 7, 7);color: white; margin-right:80%;width:90% ">Registruotis
-                </button>
+                <a href="{{ 'register' }}"
+                    style=" background-color: rgb(165, 7, 7);color: white; margin-right:80%;width:90% ">
+                    Registruotis
+                </a>
             </li>
 
             </u l>
@@ -46,7 +48,7 @@
 <body>
     <img style="margin:auto; width:" src=" your.png" alt="">
 
-    @yield('Try')
+    @yield('MainPage')
 </body>
 
 <footer style=" position: fixed;left: 0;bottom: 0;width: 100%;background-color: rgb(165, 7, 7);color: white;text-align:
