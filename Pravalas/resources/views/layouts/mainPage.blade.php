@@ -38,7 +38,7 @@
                 </a>
             </li>
 
-            </ul>
+        </ul>
     </nav>
     <nav class="p-3 bg-white  mb-1; ">
         <button style="margin-left:5%; color:grey;font-size: 20px">Naujai įdėtos knygos</button>
