@@ -2,10 +2,76 @@
 
 @section('MainPage')
 
+
     <nav>
         <img style="margin:auto" src=" your.png" alt="">
     </nav>
+    <div class="container"; style=" align-items: center; margin-left:10%;">
+        <h1>Prekių filtras</h1>
+        <h2>Kategorija</h2>
+        
+        <div class="group">
+       <input type="checkbox" id="drama" />
+       <label for="drama">Drama </label>
+        </div>
 
+        <div class="group">
+            <input type="checkbox" id="tikros" />
+            <label for="tikros">Tikros istorijos </label>
+        </div>
+
+         <div class="group">
+            <input type="checkbox" id="meilės" />
+            <label for="meilės">Meilės romanai </label>
+         </div>
+
+        <div class="group" style="margin-left:2%">
+            <input type="checkbox" id="erotinės" />
+            <label for="erotinės">Erotinės knygos </label>
+        </div>
+
+         <div class="group" style="margin-left:2%">
+            <input type="checkbox" id="meilėsr" />
+            <label for="meilėsr">Meilės romanai </label>
+         </div>
+
+        <div class="group">
+            <input type="checkbox" id="detektyvai" />
+            <label for="detektyvai">Detektyvai ir trileriai </label>
+         </div>
+
+         <div class="group">
+              <input type="checkbox" id="modernioji" />
+              <label for="modernioji">Modernioji ir šiuolaikinė literatūra </label>
+         </div>
+
+         <div class="group">
+             <input type="checkbox" id="fantasy" />
+             <label for="fantasy">Fantastika ir fantasy </label>
+          </div>
+
+          <div class="group">
+            <input type="checkbox" id="klasika" />
+            <label for="klasika">Klasika </label>
+         </div>
+
+          <div class="group">
+            <input type="checkbox" id="publicistika" />
+            <label for="publicistika">Biografijos, žmonės, publicistika </label>
+        </div>
+
+        <div class="group" style="margin-left:2%">
+            <input type="checkbox" id="autobiografijos" />
+            <label for="autobiografijos">Biografijos, autobiografijos </label>
+         </div>
+
+          <div class="group" style="margin-left:2%">
+            <input type="checkbox" id="dienorasciai" />
+            <label for="dienorasciai">Prisiminimai, dienoraščiai </label>
+        </div>
+        
+    </div>
+ </body>
     <footer style=" position: fixed;left: 0;bottom: 0;width: 100%;background-color: rgb(165, 7, 7);color: white;text-align:
                     center;">
         <nav class="p-6 bg-rgb(165, 7, 7) flex justify-between mb-6; align-items:center">
@@ -33,5 +99,6 @@
 
         </nav>
     </footer>
+
 
 @endsection
