@@ -30,14 +30,11 @@
             <button style="margin-right: 5%">
                 <img src="book.png" alt="" width="50 px" height="50px">
             </button>
-            <li style="justify-items: flex-end">
-                
-                <a href="{{ 'login' }}"
-                style=" background-color: rgb(165, 7, 7);color: white; margin-right:80%;width:90% ">
-                Prisijungti
-            </a>
-                <a href="{{ 'register' }}"
-                    style=" background-color: rgb(165, 7, 7);color: white; margin-right:80%;width:90% ">
+            <li class="bg-red-50 w-24 ">
+                <a href="{{ 'login' }}" style="color: white; margin-right:80%;width:50% ">
+                    Prisijungti
+                </a>
+                <a href="{{ 'register' }}" style=" color: white; margin-right:80%;width:50% ">
                     Registruotis
                 </a>
             </li>
