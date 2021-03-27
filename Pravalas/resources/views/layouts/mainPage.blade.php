@@ -31,7 +31,11 @@
                 <img src="book.png" alt="" width="50 px" height="50px">
             </button>
             <li style="justify-items: flex-end">
-                <button style=" background-color: rgb(165, 7, 7);color: white; width:90%">Prisijungti</button>
+                
+                <a href="{{ 'login' }}"
+                style=" background-color: rgb(165, 7, 7);color: white; margin-right:80%;width:90% ">
+                Prisijungti
+            </a>
                 <a href="{{ 'register' }}"
                     style=" background-color: rgb(165, 7, 7);color: white; margin-right:80%;width:90% ">
                     Registruotis
