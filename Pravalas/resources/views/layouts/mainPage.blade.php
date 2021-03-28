@@ -31,10 +31,10 @@
                 <img src="book.png" alt="" width="50 px" height="50px">
             </button>
             <li class="bg-red-50 w-24 ">
-                <a href="{{ 'login' }}" style="color: white; margin-right:80%;width:50% ">
+                <a href="{{ 'login' }}" style="color: white; margin-right:80%;width:50% align-items: center">
                     Prisijungti
                 </a>
-                <a href="{{ 'register' }}" style=" color: white; margin-right:80%;width:50% ">
+                <a href="{{ 'register' }}" style=" color: white; margin-right:80%;width:50% align-items: center">
                     Registruotis
                 </a>
             </li>
