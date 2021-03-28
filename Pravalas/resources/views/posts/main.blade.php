@@ -3,10 +3,12 @@
 @section('MainPage')
 
 
+
+
     <nav class=" flex align-items:center">
         <img style="margin:auto" src=" your.png" alt="">
     </nav>
-    <div class="container" ; style=" align-items: center; margin-left:10%;">
+    <div class="container" ; style=" align-items: left; margin-left:10%;">
         <h1>Prekių filtras</h1>
         <h2>Kategorija</h2>
 
@@ -69,11 +71,11 @@
             <input type="checkbox" id="dienorasciai" />
             <label for="dienorasciai">Prisiminimai, dienoraščiai </label>
         </div>
-
+    
     </div>
-
+    
     <nav class="p-6 bg-red-50 flex justify-between mb-6; align-items:center">
-        <ul style=" align-items: center; margin-left:5%; margin-top:1%">
+        <ul style=" align-items: center; margin-left:5%; margin-top:0%">
             <p> Kontaktai</p>
             <p> Pagalba</p>
             <p>Privatumo politika</p>
@@ -81,9 +83,9 @@
             <p>Partneriams</p>
         </ul>
         <ul style="align-items: center">
-            <img style="margin-left: 25%; margin-bottom:5%" src="logo.png" width="150" height="150" />
-            <p> pagalba@pravalas.lt</p>
-            <p>+370 655 5555</p>
+            <img style="margin-left: 15%; margin-bottom:5%" src="logo.png" width="180" height="150" />
+            <p style="margin-top: 1%; margin-left: 20%; font-weight: bold"> pagalba@pravalas.lt</p>
+            <p style="margin-top: 1%; margin-left: 25%; font-weight: bold"> +370 655 5555 </p>
             <p style="margin-top: 15%; margin-bottom:-5%;font-weight: bold">Ⓒ 2021 Pravalas. Visos teisės saugomos</p>
         </ul>
         <ul style="align-items: center; margin-right:5%">
