@@ -9,57 +9,50 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <style>
-        .LogButton {
-            box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
-            padding: 2px 15.6px 2px 15.6px;
-            background-color: rgb(165, 7, 7);
-            color: white;
-            font-weight: bold;
-        }
 
-        .RegButton {
-            box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
-            padding: 2px 12.5px 2px 12.5px;
-            background-color: rgb(165, 7, 7);
-            color: white;
-        }
-
-        .Book {
-            box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
-            width: 90px;
-            height: 50px;
-
-        }
-
-        .Search {
-            box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
-            border: 3px;
-            margin-top: 11px;
-            padding: 8px 85px 8px 15px;
-            border-style: solid;
-            border-color: rgb(165, 7, 7);
-            resize: none;
-            color: grey;
-            font-style: italic;
-        }
-
-        .SearchButton {
-            box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
-            width: 46.9px;
-            height: 46.9px;
-        }
-
-        #logo {
-            width: 70%;
-            margin: 0 auto;
-            text-align: right;
-        }
-
-        .Navigation {
-            width: 70%;
-            margin: 0 auto;
-        }
-
+.LogButton{
+    box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
+    padding:2px 15.6px 2px 15.6px;
+    background-color: rgb(165, 7, 7);
+    color: white; 
+    font-weight:bold;
+}
+.RegButton{
+    box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
+    padding:2px 12.5px 2px 12.5px;
+    background-color: rgb(165, 7, 7);
+    color: white;
+}
+.Book{
+    box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
+    width:90px;
+    height:50px;
+}
+.Search{
+    box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
+    border:3px;
+    margin-top:11px;
+    padding:8px 85px 8px 15px;
+    border-style:solid;
+    border-color:rgb(165, 7, 7);
+    resize:none;
+    color:grey;
+    font-style:italic;
+}
+.SearchButton{
+    box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
+    width:46.9px;
+    height:46.9px;
+}
+#logo{
+    width:70%;
+    margin:0 auto;
+    text-align:right;
+}
+.Navigation{
+    width:70%;
+    margin:0 auto;
+}
     </style>
 
 </head>
@@ -77,17 +70,26 @@
                     <textarea class="Search" name="Surasti Knygą" id="" cols="50"
                         rows="1"> Ieškoti knygos pagal jos autorių, pavadinimą.. </textarea>
                     <button style="margin-left:-2%">
-                        <img class="SearchButton" src="search.png" alt="">
+                       <img class="SearchButton" src="search.png" alt="">
                     </button>
                 </li>
             </ul>
             <ul class="flex items-center">
+            
                 <button style="margin-left: 44%;">
-                    <img class="Book" src="book.png" alt="">
+                <img class="Book" src="book.png" alt="">
                 </button>
-                <li class="bg-red-50 w-32 text-center text-white">
-                    <a href="{{ 'login' }}"> Prisijungti </a>
-                    <a href="{{ 'register' }}">Registruotis</a>
+                <li style="justify-items: flex-end">
+                
+                <a href="{{ 'login' }}"
+                class="LogButton";>
+                   Prisijungti
+                </a>
+                <a href="{{ 'register' }}"
+                    class="RegButton";>
+                    Registruotis
+                </a>
+           
                 </li>
             </ul>
         </nav>
