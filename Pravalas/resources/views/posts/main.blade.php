@@ -1,11 +1,12 @@
+@extends('layouts.footer')
+
+@show
 @extends('layouts.mainPage')
 
 @section('MainPage')
 
-
-
-    <div style="width:68%; margin:0 auto; background-color:#F3F3F3;">
-    <nav class=" flex align-items:center">
+<div style="width:68%; margin:0 auto; background-color:#F3F3F3;">
+    <nav class=" flex items-center">
         <img style="margin:auto" src=" your.png" alt="">
     </nav>
     <div class="container" ; style=" align-items: left; margin-left:10%;">
@@ -72,36 +73,9 @@
             <input type="checkbox" id="dienorasciai" />
             <label for="dienorasciai">Prisiminimai, dienoraščiai </label>
         </div>
-    <br>
+        <br>
     </div>
-    </div>
-    <footer style="width: 100%;background-color: rgb(165, 7, 7);color: white;text-align:center;">
-        <div style="width:70%; margin:0 auto;">   
-    <nav class="p-6 bg-red-50 flex justify-between mb-6; align-items:center">
-        <ul style=" align-items: center; margin-left:5%; margin-top:0%">
-            <p> Kontaktai</p>
-            <p> Pagalba</p>
-            <p>Privatumo politika</p>
-            <p>Įsigijimo sąlygos</p>
-            <p>Partneriams</p>
-        </ul>
-        <ul style="align-items: center">
-            <img style="margin-left: 30%; margin-bottom:5%" src="logo.png" width="180" height="150" />
-            <p style="margin-top: 1%; margin-left: 20%; font-weight: bold"> pagalba@pravalas.lt</p>
-            <p style="margin-top: 1%; margin-left: 25%; font-weight: bold"> +370 655 5555 </p>
-            <p style="margin-top: 15%; margin-bottom:-5%;font-weight: bold">Ⓒ 2021 Pravalas. Visos teisės saugomos</p>
-        </ul>
-        <ul style="align-items: center; margin-right:5%">
-            <p> Mano paskyra</p>
-            <p> Pirkinių krepšelis</p>
-            <p>Kaip pirkti</p>
-            <p>Kaip įdėti knygą į pardavimą</p>
-            <p>Apmokėjimas</p>
-            <p>Garantija ir grąžinimas</p>
-        </ul>
-    </nav>
-    </div>
-    </footer>
-    </body>
+</div>
 
+</body>
 @endsection

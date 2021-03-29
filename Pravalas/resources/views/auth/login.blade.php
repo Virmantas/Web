@@ -1,7 +1,13 @@
+@extends('layouts.footer')
+
+@section('Footer')
+
+@endsection
 @extends('layouts.MainPage')
+
 @section('MainPage')
-    <div class="flex justify-center">
-        <div class="w-4/12 bg-white p-6 rounded-lg">
+    <div class="wrapper flex justify-center ">
+        <div class="w-4/12 bg-white  rounded-lg my-36">
             <form action="{{ route('login') }}" method="post">
 
                 <div>
@@ -17,13 +23,15 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="bg-red-50 text-white px-4 py-3 rounded 
-                                                    font-medium w-full">Prisijungti</button>
+                    <button type="submit"
+                        class="bg-red-50 text-white px-4 py-3 rounded 
+                                                                                                                                                                                                                                                                                                    font-medium w-full">Prisijungti</button>
                 </div>
 
             </form>
         </div>
 
     </div>
+
     </body>
 @endsection

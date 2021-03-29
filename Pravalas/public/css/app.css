@@ -47,6 +47,7 @@ Remove the margin in all browsers.
 */
 
 body {
+  height:100%;
   margin: 0;
 }
 
@@ -166,6 +167,76 @@ table {
   text-indent: 0; /* 1 */
   border-color: inherit; /* 2 */
 }
+
+
+/*
+Cia bus musu custom
+*/
+.LogButton {
+  box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+  padding: 2px 15.6px 2px 15.6px;
+  background-color: rgb(165, 7, 7);
+  color: white;
+  font-weight: bold;
+}
+
+.RegButton {
+  box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+  padding: 2px 12.5px 2px 12.5px;
+  background-color: rgb(165, 7, 7);
+  color: white;
+}
+
+.Book {
+  box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+  width: 90px;
+  height: 50px;
+}
+
+.Search {
+  box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+  border: 3px;
+  margin-top: 11px;
+  padding: 8px 5px 8px 5px;
+  border-style: solid;
+  border-color: rgb(165, 7, 7);
+  resize: none;
+  color: grey;
+  font-style: italic;
+}
+
+.SearchButton {
+  box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+  width: 46.9px;
+  height: 46.9px;
+}
+
+#logo {
+  width: 70%;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.Navigation {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+.wrapper{
+  min-height:50%;
+margin-bottom: 77px
+}
+
+.footer {
+
+  color: white;
+  background-color: rgb(165, 7, 7);
+}
+
+/*
+ Cia pabaiga
+/*
 
 /*
 Forms
@@ -11617,7 +11688,7 @@ video {
 }
 
 .m-0 {
-  margin: 0px;
+  margin: 0 auto;
 }
 
 .m-1 {
@@ -26987,6 +27058,9 @@ video {
 
 .w-2\/4 {
   width: 50%;
+}
+.w-7\/10 {
+  width: 70%;
 }
 
 .w-3\/4 {
@@ -42679,7 +42753,6 @@ video {
     margin-top: 5rem;
     margin-bottom: 5rem;
   }
-
   .sm\:mx-20 {
     margin-left: 5rem;
     margin-right: 5rem;
