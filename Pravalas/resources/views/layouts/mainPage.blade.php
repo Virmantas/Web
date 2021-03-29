@@ -32,7 +32,7 @@
     box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.75);
     border:3px;
     margin-top:11px;
-    padding:8px 85px 8px 15px;
+    padding:8px 5px 8px 5px;
     border-style:solid;
     border-color:rgb(165, 7, 7);
     resize:none;
