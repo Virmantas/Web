@@ -79,6 +79,7 @@
             <button style="margin-left: 44%;">
                 <img class="Book" src="book.png" alt="">
             </button>
+<<<<<<< HEAD
             <li style="justify-items: flex-end">
                 
                 <a href="{{ 'login' }}"
@@ -91,6 +92,11 @@
                     >
                     Registruotis
                 </a>
+=======
+            <li class="bg-red-50 w-32 text-center text-white">
+                <a href="{{ 'login' }}" > Prisijungti </a>
+                <a href="{{ 'register' }}" >Registruotis</a>
+>>>>>>> cb55b622cfc7bb66ef8f240764fc0c4cc2b71101
             </li>
         </ul>
     </nav>
