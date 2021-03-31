@@ -4,7 +4,7 @@
             <ul class="flex items-center" style="margin-left:5%;">
 
                 <li class="md:place-items-center">
-                    <a href="">Kontaktai <br></a>
+                    <a href="about">Kontaktai <br></a>
                     <a href="help">Pagalba <br></a>
                     <a href="">Privatumo politika <br></a>
                     <a href="">Įsigijimo sąlygos <br></a>
