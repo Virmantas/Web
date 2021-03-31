@@ -5,7 +5,7 @@
 
                 <li class="md:place-items-center">
                     <a href="">Kontaktai <br></a>
-                    <a href="">Pagalba <br></a>
+                    <a href="help">Pagalba <br></a>
                     <a href="">Privatumo politika <br></a>
                     <a href="">Įsigijimo sąlygos <br></a>
                     <a href="">Partneriams <br></a>
