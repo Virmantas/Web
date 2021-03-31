@@ -31,20 +31,24 @@
                 <img src="book.png" alt="" width="50 px" height="50px">
             </button>
             <li class="bg-red-50 w-32 text-center text-white">
-                <a href="{{ 'login' }}" > Prisijungti </a>
-                <a href="{{ 'register' }}" >Registruotis</a>
+                <a href="{{ 'login' }}"> Prisijungti </a>
+                <a href="{{ 'register' }}">Registruotis</a>
             </li>
 
         </ul>
     </nav>
     <nav class="p-3 bg-white mb-1; ">
-        <button style="margin-left:5%; color:grey;font-size: 20px">Naujai įdėtos knygos</button>
-        <button style="margin-left:1.5%;color:grey;font-size: 20px">Knygos</button>
-        <button style="margin-left:1.5%;color:grey;font-size: 20px">Pagalba</button>
-        <button style="margin-left:1.5%;color:grey;font-size: 20px ">Apie mus</button>
+        <form>
+            <button style="margin-left:5%; color:grey;font-size: 20px">Naujai įdėtos knygos</button>
+            <button style="margin-left:1.5%;color:grey;font-size: 20px">Knygos</button>
+            <button formaction="{{ 'help' }}"
+                style="margin-left:1.5%;color:grey;font-size: 20px">Pagalba</button>
+            <button formaction="{{ 'about' }}" style="margin-left:1.5%;color:grey;font-size: 20px ">Apie
+                mus</button>
+        </form>
         <h1 style="margin-top:0.2%; border-bottom: 2px solid grey"></h1>
     </nav>
-    
+
 
     @yield('MainPage')
 </body>

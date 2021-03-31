@@ -40,7 +40,7 @@
                 <div>
                     <button type="submit"
                         class="bg-red-50 text-white px-4 py-3 rounded 
-                                                                                                                                font-medium w-full">Registruotis</button>
+                                                                                                                                        font-medium w-full">Registruotis</button>
                 </div>
 
             </form>

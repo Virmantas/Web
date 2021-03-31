@@ -33,10 +33,10 @@
                 </button>
                 <li class="place-items-center">
 
-                    <a href="{{ 'login' }}" class="LogButton" ;>
+                    <a href="{{ 'login' }}" class="LogButton">
                         Prisijungti
                     </a>
-                    <a href="{{ 'register' }}" class="RegButton" ;>
+                    <a href="{{ 'register' }}" class="RegButton">
                         Registruotis
                     </a>
 
