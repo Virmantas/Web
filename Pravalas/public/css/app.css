@@ -105,7 +105,6 @@ b,
 strong {
   font-weight: bolder;
 }
-
 /**
 1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 2. Correct the odd 'em' font sizing in all browsers.
@@ -172,6 +171,11 @@ table {
 /*
 Cia bus musu custom
 */
+
+.help{
+  margin: 3%;
+  line-height: 2;
+}
 .LogButton {
   box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
   padding: 2px 15.6px 2px 15.6px;
