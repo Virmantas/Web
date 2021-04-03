@@ -9,7 +9,7 @@
     <div class="wrapper flex justify-center ">
         <div class="w-4/12 bg-white  rounded-lg my-36">
             <form action="{{ route('login') }}" method="post">
-
+                @csrf
                 <div>
                     <label for="email" class="sr-only">Email</label>
                     <input type="text" name="name" id="name" placeholder="Email"
@@ -25,7 +25,7 @@
                 <div>
                     <button type="submit"
                         class="bg-red-50 text-white px-4 py-3 rounded 
-                                                                                                                                                                                                                                                                                                            font-medium w-full">Prisijungti</button>
+                                                                                                                                                                                                                                                                                                                    font-medium w-full">Prisijungti</button>
                 </div>
 
             </form>

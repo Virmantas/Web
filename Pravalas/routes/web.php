@@ -8,6 +8,7 @@ use App\Http\Controllers\HelpController;
 use App\Http\Controllers\AboutController;
 
 Route::get('/register',[RegisterController::class,'index'])->name('register');
+Route::post('/register',[RegisterController::class,'store']);
 
 Route::get('/login',[Logincontroller::class,'Login'])->name('login');
 
