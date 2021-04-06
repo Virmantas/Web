@@ -12,8 +12,8 @@
             bendruomeniškumą tarp sparčiai susidomėjimą prarandančių popierinių knygų mylėtojų bei moko pamilti
             popierines knygas iš naujo.</p>
         <b>Kontaktai</b>
-        <p>Email: pravalaslt@gmail.com</p>
-        <p>Telefono numeris: 868686868</p>
+        <p>Email: pagalba@pravalas.lt</p>
+        <p>Telefono numeris: +370 655 5555</p>
 
     </div>
 </div>
