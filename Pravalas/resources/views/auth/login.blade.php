@@ -11,14 +11,14 @@
             <form action="{{ route('login') }}" method="post">
                 @csrf
                 <div>
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="text" name="name" id="name" placeholder="Email"
+                    <label for="email" class="sr-only">Elektroninis paštas</label>
+                    <input type="text" name="name" id="name" placeholder="Elektroninis paštas"
                         class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="">
                 </div>
 
                 <div>
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Choose password"
+                    <label for="password" class="sr-only">Įveskite slaptažodį</label>
+                    <input type="password" name="password" id="password" placeholder="Įveskite slaptažodį"
                         class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="">
                 </div>
 

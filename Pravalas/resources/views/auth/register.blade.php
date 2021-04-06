@@ -34,7 +34,7 @@
 
                 <div class="mb-4">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Emailas"
+                    <input type="text" name="email" id="email" placeholder="Elektroninis paštas"
                         class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('email') border-red-500 @enderror"
                         value="{{ old('email') }}">
                     @error('email')
@@ -59,7 +59,7 @@
                 <div class="mb-4">
                     <label for="password_confirmation" class="sr-only">Password again</label>
                     <input type="password" name="password_confirmation" id="password_confirmation"
-                        placeholder="Pakartokite slaptažodi"
+                        placeholder="Pakartokite slaptažodį"
                         class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password_confirmation') border-red-500 @enderror"
                         value="">
                     @error('password_confirmation')
