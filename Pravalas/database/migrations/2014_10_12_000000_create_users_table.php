@@ -25,17 +25,21 @@ class CreateUsersTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id('PostId');
             $table->string('Name');
+            $table->string('Catagory');
+            $table->string('Author');
+            $table->string('Status');
+            $table->double('Price');
             $table->string('WhereToStore');
             $table->unsignedBigInteger('UserId');
             
             $table->foreign('UserId')->references('UserId')->on('users')->onDelete('cascade');
         });
         Schema::create('likedPosts', function (Blueprint $table) {
-            $table->integer('UserId');
+            $table->integer('UsersID');
             $table->integer('LikedPostId');
-            $table->primary('UserId','LikedPostId');
-            $table->foreign('UserId')->references('UserId')->on('users')->onDelete('cascade');
-            $table->foreign('LikedPostId')->references('PostId')->on('posts')->onDelete('cascade');
+            $table->primary(['UsersID','LikedPostId']);
+            //$table->foreign('UsersID')->references('UserId')->on('users')->onDelete('cascade');
+            //$table->foreign('LikedPostId')->references('PostId')->on('posts')->onDelete('cascade');
         });
 
     }
@@ -49,6 +53,6 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
         Schema::dropIfExists('posts');
-       // Schema::dropIfExists('likedPosts');
+        Schema::dropIfExists('likedPosts');
     }
 }
