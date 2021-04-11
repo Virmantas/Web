@@ -13,7 +13,7 @@
     <div id="logo">
         <nav class="p-6 bg-white flex justify-between">
             <ul class="flex items-center">
-                <a href="http://127.0.0.1:8000/"> <img src="logo.png" width="270"> </a>
+                <a href="/"> <img src="logo.png" width="270"> </a>
             </ul>
 
             <ul class="flex items-center">
