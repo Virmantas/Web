@@ -12,35 +12,35 @@
 <body>
     <div id="logo">
         <nav class="p-6 bg-white flex justify-between">
-            <ul class="flex items-center">
-                <a href="/"> <img src="logo.png" width="270"> </a>
+            <ul style="align-items: center">
+                <a href="/"> <img style="margin-left: 0%" src="logo.png" width="250" height="250" /> </a>
             </ul>
-
             <ul class="flex items-center">
-                <li>
-                    <textarea class="Search" name="Surasti Knygą" id="" cols="50"
-                        rows="1"> Ieškoti knygos pagal jos autorių, pavadinimą.. </textarea>
-
+                <li class="">
+                    <textarea style="border:3px; border-style:solid; border-color:rgb(165, 7, 7); resize:none"
+                        name="Surasti Knygą" id="" cols="50" rows="1"> Ieškoti knygos</textarea>
                     <button style="margin-left:-2%">
-                        <img class="SearchButton" src="search.png" alt="">
+                        <img src="search.png" alt="" width="33.5px" height="33.5px">
                     </button>
                 </li>
             </ul>
             <ul class="flex items-center">
-
-                <button style="margin-left: 44%;">
-                    <img class="Book" src="book.png" alt="">
+                <button style="margin-right: 5%">
+                    <img src="book.png" alt="" width="50 px" height="50px">
                 </button>
-                <li class="place-items-center">
 
-                    <a href="{{ 'login' }}" class="LogButton">
-                        Prisijungti
-                    </a>
-                    <a href="{{ 'register' }}" class="RegButton">
-                        Registruotis
-                    </a>
+                @if (auth()->user())
+                    <li class="bg-red-50 w-32 text-center text-white">
+                        <a href="{{ 'logout' }}"> Atsijungti </a>
 
-                </li>
+                    </li>
+                @else
+                    <li class="bg-red-50 w-32 text-center text-white">
+                        <a href="{{ 'login' }}"> Prisijungti </a>
+                        <a href="{{ 'register' }}">Registruotis</a>
+                    </li>
+                @endif
+
             </ul>
         </nav>
     </div>

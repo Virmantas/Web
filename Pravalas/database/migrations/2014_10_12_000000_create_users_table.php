@@ -18,29 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('Name');
             $table->string('Email')->unique();
             $table->string('Password');
-            //$table->timestamp('email_verified_at')->nullable();
-            //$table->rememberToken();
-            //$table->timestamps();
         });
-        Schema::create('posts', function (Blueprint $table) {
-            $table->id('PostId');
-            $table->string('Name');
-            $table->string('Catagory');
-            $table->string('Author');
-            $table->string('Status');
-            $table->double('Price');
-            $table->string('WhereToStore');
-            $table->unsignedBigInteger('UserId');
-            
-            $table->foreign('UserId')->references('UserId')->on('users')->onDelete('cascade');
-        });
-        Schema::create('likedPosts', function (Blueprint $table) {
-            $table->integer('UsersID');
-            $table->integer('LikedPostId');
-            $table->primary(['UsersID','LikedPostId']);
-            //$table->foreign('UsersID')->references('UserId')->on('users')->onDelete('cascade');
-            //$table->foreign('LikedPostId')->references('PostId')->on('posts')->onDelete('cascade');
-        });
+        
 
     }
 
@@ -52,7 +31,7 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
-        Schema::dropIfExists('posts');
-        Schema::dropIfExists('likedPosts');
+        //Schema::dropIfExists('posts');
+        //Schema::dropIfExists('likedPosts');
     }
 }
