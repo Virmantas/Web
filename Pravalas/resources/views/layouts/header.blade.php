@@ -25,21 +25,21 @@
                 </li>
             </ul>
             <ul class="flex items-center">
-                <button style="margin-right: 5%">
+                <button style="Book">
                     <img src="book.png" alt="" width="50 px" height="50px">
                 </button>
 
-                @if (auth()->user())
-                    <li class="bg-red-50 w-32 text-center text-white">
-                        <a href="{{ 'logout' }}"> Atsijungti </a>
-
-                    </li>
-                @else
-                    <li class="bg-red-50 w-32 text-center text-white">
-                        <a href="{{ 'login' }}"> Prisijungti </a>
-                        <a href="{{ 'register' }}">Registruotis</a>
-                    </li>
-                @endif
+                <li style="justify-items: flex-end">
+                
+                <a href="{{ 'login' }}"
+                class="LogButton"; >
+                Prisijungti
+                </a>
+                <a href="{{ 'register' }}"
+                    class="RegButton";>
+                    Registruotis
+                </a>
+                </li>
 
             </ul>
         </nav>

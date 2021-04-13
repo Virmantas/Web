@@ -16,7 +16,7 @@ class Logincontroller extends Controller
     {
         $this->validate($request, [
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required',
         ]);
 
        if(!auth()->attempt($request->only('email', 'password')))

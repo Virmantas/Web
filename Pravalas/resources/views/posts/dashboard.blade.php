@@ -1,9 +1,9 @@
 @extends('layouts.footer')
 
 @show
-@extends('layouts.MainPage')
+@extends('layouts.MainPageUSER')
 
-@section('MainPage')
+@section('MainPageUser')
 
 <div style="width:68%; margin:0 auto; background-color:#F3F3F3;">
     <nav class=" flex items-center">

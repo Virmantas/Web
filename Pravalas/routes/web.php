@@ -17,7 +17,7 @@ Route::get('/register',[RegisterController::class,'index'])->name('register');
 
 Route::post('/register',[RegisterController::class,'store']);
 
-Route::get('/logout',[Logoutcontroller::class,'store'])->name('logout');
+Route::post('/logout',[Logoutcontroller::class,'store'])->name('logout');
 
 Route::get('/login',[Logincontroller::class,'Login'])->name('login');
 

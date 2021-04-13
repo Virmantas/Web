@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="m-0  w-7/10">
         <nav class="p-6 bg-red-50 flex justify-between  flex items-center">
-            <ul class="flex items-center" style="margin-left:5%;">
+            <ul class="flex items-center" style="margin-left:5%;text-align:center;">
 
                 <li class="md:place-items-center">
                     <a href="about">Kontaktai <br></a>
@@ -19,13 +19,11 @@
                     teisės saugomos
                 </p>
             </ul>
-            <ul class="items-center" style="margin-right:5%">
+            <ul class="items-center" style="margin-right:5%; text-align:center;">
                 <a href="">Mano paskyra <br></a>
                 <a href="">Pirkinių krepšelis <br></a>
                 <a href="">Kaip pirkti <br></a>
                 <a href="">Kaip įdėti knygą į pardavimą <br></a>
-                <a href="">Apmokėjimas <br></a>
-                <a href="">Garantija ir grąžinimas <br></a>
             </ul>
         </nav>
     </div>
