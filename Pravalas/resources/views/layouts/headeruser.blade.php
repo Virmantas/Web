@@ -42,7 +42,10 @@
         </nav>
 
     </div>
-
+    <div id="logo">
+    <a href="{{ 'dashboard' }}"
+    class="Ad";> Įkelti skelbimą</a>
+    </div>
     <nav class="p-3 bg-white mb-1; ">
         <form> 
         <h1 style="border-bottom: 1.5px solid rgb(217, 217, 217)"></h1>
@@ -52,10 +55,6 @@
             <button formaction="{{ 'help' }}" style="margin-left:1.5%;color:grey;font-size: 20px">Pagalba</button>
             <button formaction="{{ 'about' }}" style="margin-left:1.5%;color:grey;font-size: 20px ">Apie mus</button>
             <button formaction="{{ 'about' }}" style="margin-left:1.5%;color:grey;font-size: 20px ">Mano skelbimai</button>
-            <a href="{{ 'dashboard' }}"
-            class="Ad"; >
-            Įkelti skelbimą
-            </a>
         </div>     
         <h1 style="border-bottom: 1.5px solid rgb(217, 217, 217)"></h1>
         </form>
