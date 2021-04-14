@@ -34,10 +34,12 @@
                 <button class="User">
                     <img src="useris.png" alt="" >
                 </button>
-               
+               <form action="{{ route('logout') }}" method="post" class="inline">
+                @csrf
                 <button type="submit" class="Logout">
                 <img src="logout.png" alt="" >
                 </button>
+               </form>
             </ul>
         </nav>
 

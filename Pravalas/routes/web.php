@@ -10,7 +10,6 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\InsertBookController;
 use App\Http\Controllers\DashboardController;
 
-
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
 Route::get('/register',[RegisterController::class,'index'])->name('register');
@@ -30,8 +29,8 @@ Route::get('/about',[AboutController::class,'about'])->name('about');
 Route::get('/insert',[InsertBookController::class,'Insert'])->name('insert');
 
 Route::get('/', function () {
-    return view('posts.main');
-});
+    return view('home');
+})->name('home');;
 
 
 
