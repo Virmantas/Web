@@ -39,6 +39,11 @@
                     <input type="text" name="Kaina" id="price" placeholder="Kaina"
                         class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="">
                 </div>
+                <div>
+                    <label for="wheretostore" class="sr-only">wheretostore</label>
+                    <input type="text" name="Iš kur esate?" id="wheretostore" placeholder="Iš kur esate?"
+                        class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="">
+                </div>
 
                 <div>
                     <button type="submit"

@@ -9,6 +9,7 @@ use App\Http\Controllers\HelpController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\InsertBookController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AllBooksController;
 
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
@@ -27,6 +28,8 @@ Route::get('/help',[HelpController::class,'help'])->name('help');
 Route::get('/about',[AboutController::class,'about'])->name('about');
 
 Route::get('/insert',[InsertBookController::class,'Insert'])->name('insert');
+
+Route::get('/books',[AllBooksController::class,'books'])->name('books');
 
 Route::get('/', function () {
     return view('home');
