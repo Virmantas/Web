@@ -17,7 +17,7 @@ class CreateBooksTable extends Migration
             $table->id();
 
             $table->integer('user_id')->unsigned()->index();
-            $table->text('body');
+           
             
             $table->timestamps();
         });

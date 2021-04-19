@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Book;
 
 class InsertBookController extends Controller
 {
     public function Insert()
     {
-        return view('auth.insert');
+        $books = Book::get();
+
+
+        return view('auth.insert', [
+            'books' => $books
+        ]);
 
     }
 
@@ -44,7 +50,7 @@ class InsertBookController extends Controller
         'wheretostore' => $request->wheretostore,
     ]);
 
-    return redirect()->route('books');
+    return back();
 
     }
 }

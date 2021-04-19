@@ -27,7 +27,7 @@ Route::get('/help',[HelpController::class,'help'])->name('help');
 
 Route::get('/about',[AboutController::class,'about'])->name('about');
 
-Route::get('/insert',[InsertBookController::class,'Insert'])->name('insert');
+Route::get('/insert',[InsertBookController::class,'insert'])->name('insert');
 
 Route::get('/books',[AllBooksController::class,'books'])->name('books');
 

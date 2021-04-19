@@ -17,9 +17,9 @@
             @if ($books->count() )
                 @foreach ($books as $book)
                     <div class="mb-4">
-                        <a href="" class="font-bold">{{ $book->user}}</a>
 
-                        <p class="mb-2"> {{ $book->name }}</p>
+                        <p class="mb-2">Knygos savininkas: {{ $book->UserId}}  {{ $book->Name}} {{ $book->Category}} {{ $book->Author}}
+                         {{ $book->Status}} {{ $book->Price}} {{ $book->WhereToStore}}</p>
 
                     </div>
                 @endforeach
