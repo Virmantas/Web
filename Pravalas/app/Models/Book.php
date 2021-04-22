@@ -10,6 +10,7 @@ class Book extends Model
 {
     use HasFactory;
 
+    protected $table = 'posts';
     protected $fillable = [
         'name',
         'category',
@@ -17,7 +18,6 @@ class Book extends Model
         'status',
         'price',
         'wheretostore'
-
     ];
 
     public function user()

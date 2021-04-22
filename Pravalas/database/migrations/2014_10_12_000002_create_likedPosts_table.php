@@ -17,8 +17,8 @@ class CreateLikedPostsTable extends Migration
             $table->unsignedBigInteger('usersid');
             $table->unsignedBigInteger('likedpostid');
             $table->primary(['usersid','likedpostid']);
-            $table->foreign('usersid')->references('userid')->on('users')->onDelete('cascade');
-            $table->foreign('likedpostid')->references('postid')->on('posts')->onDelete('cascade');
+           // $table->foreign('usersid')->references('userid')->on('users')->onDelete('cascade');
+            //$table->foreign('likedpostid')->references('postid')->on('posts')->onDelete('cascade');
         });
     }
 

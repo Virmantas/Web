@@ -10,9 +10,8 @@ class AllBooksController extends Controller
 {
     public function Books()
     {
-        $books = Book::get(); 
-
-
+        $books = Book::with(['user'])->get(); //Book::get(); 
+        dd($books);
         return view('auth.books',[
             'books' => $books
         ]);
