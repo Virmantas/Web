@@ -22,9 +22,6 @@ class CreatePostsTable extends Migration
             $table->double('price');
             $table->string('wheretostore');
             $table->foreignId('user_id')->constrained('users');
-            // $table->unsignedBigInteger('users_id');
-            
-            // $table->foreign('userid')->references('userid')->on('users')->onDelete('cascade');
         });
     }
 

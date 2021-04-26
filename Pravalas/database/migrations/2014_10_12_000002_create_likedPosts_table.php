@@ -14,11 +14,11 @@ class CreateLikedPostsTable extends Migration
     public function up()
     {
         Schema::create('likedPosts', function (Blueprint $table) {
-            $table->unsignedBigInteger('usersid');
-            $table->unsignedBigInteger('likedpostid');
-            $table->primary(['usersid','likedpostid']);
-           // $table->foreign('usersid')->references('userid')->on('users')->onDelete('cascade');
-            //$table->foreign('likedpostid')->references('postid')->on('posts')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('post_id');
+            $table->primary(['user_id','post_id']);
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
         });
     }
 
