@@ -8,11 +8,11 @@
 @section('MainPage')
     <div class="wrapper flex justify-center ">
         <div class="w-4/12 bg-white  rounded-lg my-36">
-            @if(session('status'))
-            <div class="text-red-500 mt-2 text-sm">
-            {{ session('status') }}
-            </div>
-            @endif 
+            @if (session('status'))
+                <div class="text-red-500 mt-2 text-sm">
+                    {{ session('status') }}
+                </div>
+            @endif
             <form action="{{ route('login') }}" method="post">
                 @csrf
                 <div class="mb-4">
@@ -42,7 +42,7 @@
                 <div>
                     <button type="submit"
                         class="bg-red-50 text-white px-4 py-3 rounded 
-                                                                                                                                                                                                                                                                                                                    font-medium w-full">Prisijungti</button>
+                                                                                                                                                                                                                                                                                                                        font-medium w-full">Prisijungti</button>
                 </div>
 
             </form>

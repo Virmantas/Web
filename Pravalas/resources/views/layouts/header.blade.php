@@ -25,21 +25,41 @@
                 </li>
             </ul>
             <ul class="flex items-center">
-                <button style="Book">
-                    <img src="book.png" alt="" width="50 px" height="50px">
-                </button>
 
-                <li style="justify-items: flex-end">
-                
-                <a href="{{ 'login' }}"
-                class="LogButton"; >
-                Prisijungti
-                </a>
-                <a href="{{ 'register' }}"
-                    class="RegButton";>
-                    Registruotis
-                </a>
-                </li>
+                @guest
+                    <button style="Book">
+                        <img src="book.png" alt="" width="50 px" height="50px">
+                    </button>
+                    <li style="justify-items: flex-end">
+
+                        <a href="{{ 'login' }}" class="LogButton" ;>
+                            Prisijungti
+                        </a>
+                        <a href="{{ 'register' }}" class="RegButton" ;>
+                            Registruotis
+                        </a>
+                    </li>
+                @endguest
+                @auth
+                    <li class="flex items-center">
+                        <button class="BookUser">
+                            <img src="bookuser.png" alt="">
+                        </button>
+                        <button class="Mail">
+                            <img src="mail.png" alt="">
+                        </button>
+                        <button class="User">
+                            <img src="useris.png" alt="">
+                        </button>
+                        <form action="{{ route('logout') }}" method="post" class="inline">
+                            @csrf
+                            <button type="submit" class="Logout">
+                                <img src="logout.png" alt="">
+                            </button>
+                        </form>
+                    </li>
+
+                @endauth
 
             </ul>
         </nav>

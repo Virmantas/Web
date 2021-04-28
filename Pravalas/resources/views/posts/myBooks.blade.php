@@ -17,7 +17,7 @@
             @if ($books->count())
                 @foreach ($books as $book)
                     <div class="mb-4">
-                        <p class="mb-2">Knygos savininkas: {{ $book->user->name }}
+                        <p class="mb-2">
                             <br> Knygos pavadinimas:{{ $book->name }}
                             <br> Knygos Kategorija:{{ $book->category }}
                             <br> Knygos Autorius:{{ $book->author }}

@@ -7,11 +7,8 @@ use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\Logoutcontroller;
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\InsertBookController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AllBooksController;
+use App\Http\Controllers\PostController;
 
-Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
 Route::get('/register',[RegisterController::class,'index'])->name('register');
 
@@ -27,9 +24,14 @@ Route::get('/help',[HelpController::class,'help'])->name('help');
 
 Route::get('/about',[AboutController::class,'about'])->name('about');
 
-Route::get('/insert',[InsertBookController::class,'insert'])->name('insert');
 
-Route::get('/books',[AllBooksController::class,'books'])->name('books');
+Route::get('/books',[PostController::class,'index'])->name('books');
+
+Route::get('/insert',[PostController::class,'create'])->name('insert');
+
+Route::get('/test',[PostController::class,'show'])->name('test');
+
+Route::post('/insert',[PostController::class,'store']);
 
 Route::get('/', function () {
     return view('home');

@@ -24,7 +24,7 @@ class Logincontroller extends Controller
            return back()->with('status', 'Netinkami prisijungimo duomenys');
        }
 
-        return redirect()->route('dashboard');
+        return redirect()->route('home');
 
     }
 }
