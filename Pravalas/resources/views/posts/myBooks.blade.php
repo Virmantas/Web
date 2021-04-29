@@ -13,7 +13,7 @@
                 Čia bus visos įkeltos knygos
 
             </form>
-
+            <!---  Cia reikia stiliu -->
             @if ($books->count())
                 @foreach ($books as $book)
                     <div class="mb-4">
@@ -25,6 +25,7 @@
                             <br> Kaina:{{ $book->price }}
                         </p>
                     </div>
+
                 @endforeach
                 {{ $books->links() }}
             @else

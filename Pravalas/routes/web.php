@@ -7,8 +7,8 @@ use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\Logoutcontroller;
 use App\Http\Controllers\HelpController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\LikedPostController;
 use App\Http\Controllers\PostController;
-
 
 Route::get('/register',[RegisterController::class,'index'])->name('register');
 
@@ -32,6 +32,8 @@ Route::get('/insert',[PostController::class,'create'])->name('insert');
 Route::get('/test',[PostController::class,'show'])->name('test');
 
 Route::post('/insert',[PostController::class,'store']);
+
+Route::post('/test/{post}/likes',[LikedPostController::class,'store']);
 
 Route::get('/', function () {
     return view('home');

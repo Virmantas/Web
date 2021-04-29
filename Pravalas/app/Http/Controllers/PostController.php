@@ -9,10 +9,11 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
+    private $pageCount=5;
     
     public function index()
     {
-        $books = Post::with(['user'])->paginate(5); //Book::get(); 
+        $books = Post::with(['user'])->paginate($this->pageCount);
         return view('auth.books',[
             'books' => $books
         ]);
@@ -49,10 +50,7 @@ class PostController extends Controller
 
     public function show()
     {
-        //return view('posts.myBooks');
-        $books = DB::table('posts')->where('id',auth()->id());
-
-        dd($books);
+        $books = DB::table('posts')->where('user_id',auth()->id())->paginate($this->pageCount);
         return view('posts.myBooks',[
             'books' => $books
         ]);
