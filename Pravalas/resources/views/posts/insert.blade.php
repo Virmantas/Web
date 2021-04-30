@@ -8,7 +8,7 @@
 @section('MainPage')
     <div class="wrapper flex justify-center ">
         <div class="w-4/12 bg-white  rounded-lg my-36">
-            <form action="{{ route('insert') }}" method="post">
+            <form action="{{ route('insert') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div>
                     <label for="name" class="sr-only">Pavadinimas</label>
@@ -79,9 +79,18 @@
                         </div>
                     @enderror
                 </div>
+                <div>
+                    <input type="file" name="image" class=" @error('image') border-red-500 @enderror">
+                    @error('image')
+                        <div class=" text-red-500 mt-2 text-sm">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
 
                 <div>
                     <button type="submit" class="bg-red-50 text-white px-4 py-3 rounded font-medium w-full">Įkelti</button>
+
                 </div>
 
             </form>

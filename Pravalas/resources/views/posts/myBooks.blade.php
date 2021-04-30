@@ -8,12 +8,12 @@
 @section('MainPage')
     <div class="wrapper flex justify-center ">
         <div class="w-4/12 bg-white justify-center  rounded-lg my-36">
-            <form action="{{ route('books') }}" method="post">
+            <form action="{{ route('home') }}" method="post">
 
                 Čia bus visos įkeltos knygos
 
             </form>
-            <!---  Cia reikia stiliu -->
+
             @if ($books->count())
                 @foreach ($books as $book)
                     <div class="mb-4">
@@ -24,8 +24,11 @@
                             <br> Knygos būklė:{{ $book->status }}
                             <br> Kaina:{{ $book->price }}
                         </p>
+                        <img src="{{ asset('/images/' . $book->image) }}" alt="">
                     </div>
-
+                    <div>
+                        <form action="" method="post" clas></form>
+                    </div>
                 @endforeach
                 {{ $books->links() }}
             @else

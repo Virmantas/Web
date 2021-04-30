@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('status');
             $table->double('price');
             $table->string('wheretostore');
+            $table->string('image');
             $table->timestamp('updated_at')->useCurrent();
             $table->timestamp('created_at')->useCurrent();
             $table->foreignId('user_id')->constrained('users');

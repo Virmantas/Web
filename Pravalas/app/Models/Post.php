@@ -17,7 +17,8 @@ class Post extends Model
         'author',
         'status',
         'price',
-        'wheretostore'
+        'wheretostore',
+        'image'
     ];
 
     public function user()

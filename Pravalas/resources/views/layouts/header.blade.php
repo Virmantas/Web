@@ -17,11 +17,15 @@
             </ul>
             <ul class="flex items-center">
                 <li class="">
-                    <textarea style="border:3px; border-style:solid; border-color:rgb(165, 7, 7); resize:none"
-                        name="Surasti Knygą" id="" cols="50" rows="1"> Ieškoti knygos</textarea>
-                    <button style="margin-left:-2%">
-                        <img src="search.png" alt="" width="33.5px" height="33.5px">
-                    </button>
+                    <form action="{{ route('find') }}" method="get">
+                        @csrf
+                        <textarea style="border:3px; border-style:solid; border-color:rgb(165, 7, 7); resize:none"
+                            name="book" placeholder="Ieškoti knygos" id="" cols="50" rows="1"></textarea>
+                        <button type="submit" style="margin-left:-2%">
+                            <img src="search.png" alt="" width="33.5px" height="33.5px">
+                        </button>
+                    </form>
+
                 </li>
             </ul>
             <ul class="flex items-center">
