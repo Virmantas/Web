@@ -5,86 +5,43 @@
 
 @section('MainPage')
 
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 <div style="width:68%; margin:0 auto; background-color:#F3F3F3;">
     <nav class=" flex items-center">
         <img style="margin:auto" src=" your.png" alt="">
     </nav>
     <div class="container flex justify-between" style=" align-items: left; margin-left:10%;">
-        <div class="">
-            <br>
-            <h1>Prekių filtras</h1>
-            <h2>Kategorija</h2>
 
-            <form action="{{ route('findCategory') }}" method="get">
-                @csrf
-                <div class="group">
-                    <input type="checkbox" name="option[]" value="drama" id="drama" />
-                    <label for="drama">Drama </label>
-                </div>
 
-                <div class="group">
-                    <input type="checkbox" name="option[]" value="tikros" id="tikros" />
-                    <label for="tikros">Tikros istorijos </label>
-                </div>
-
-                <div class="group">
-                    <input type="checkbox" name="option[]" value="test" id="test" />
-                    <label for="meiles">Meilės romanai </label>
-                </div>
-
-                <div class="group" style="margin-left:2%">
-                    <input type="checkbox" name="option[]" value="erotinės" id="erotinės" />
-                    <label for="erotinės">Erotinės knygos </label>
-                </div>
-
-                <div class="group" style="margin-left:2%">
-                    <input type="checkbox" name="option[]" value="erotinės" id="meilėsr" />
-                    <label for="meilėsr">Meilės romanai </label>
-                </div>
-
-                <div class="group">
-                    <input type="checkbox" name="option[]" value="detektyvai" id="detektyvai" />
-                    <label for="detektyvai">Detektyvai ir trileriai </label>
-                </div>
-
-                <div class="group">
-                    <input type="checkbox" name="option[]" value="modernioji" id="modernioji" />
-                    <label for="modernioji">Modernioji ir šiuolaikinė literatūra </label>
-                </div>
-
-                <div class="group">
-                    <input type="checkbox" name="option[]" value="fantasy" id="fantasy" />
-                    <label for="fantasy">Fantastika ir fantasy </label>
-                </div>
-
-                <div class="group">
-                    <input type="checkbox" name="option[]" value="klasika" id="klasika" />
-                    <label for="klasika">Klasika </label>
-                </div>
-
-                <div class="group">
-                    <input type="checkbox" name="option[]" value="publicistika" id="publicistika" />
-                    <label for="publicistika">Biografijos, žmonės, publicistika </label>
-                </div>
-
-                <div class="group" style="margin-left:2%">
-                    <input type="checkbox" name="option[]" value="autobiografijos" id="autobiografijos" />
-                    <label for="autobiografijos">Biografijos, autobiografijos </label>
-                </div>
-
-                <div class="group" style="margin-left:2%">
-                    <input type="checkbox" name="option[]" value="dienorasciai" id="dienorasciai" />
-                    <label for="dienorasciai">Prisiminimai, dienoraščiai </label>
-                </div>
-                <button type="submit" class="bg-red-50 text-white px-4 py-3 rounded font-medium w-full">Surasti</button>
-
-                </button>
-            </form>
         </div>
         <div class="flex justify-between">
             <div>
                 @if ($books->count())
                     @foreach ($books as $book)
+
+                    <body>
+                        <div class="wrapper1">
+                          <div class="product-img">
+                            <img src="{{ asset('/images/' . $book->image) }}" height="380" width="294">
+                           
+                          </div>
+                          <div class="product-info">
+                            <div class="product-text">
+                              <h1>{{ $book->name }}</h1>
+                              <h2>{{ $book->author }}</h2>
+                              <h3>{{ $book->user->name }}</h3>
+                              <h3>Knygos Kategorija: {{ $book->category }}</h3>
+                              <h3>Knygos būklė: {{ $book->status }}</h3>
+                            </div>
+                            <div class="product-price-btn">
+                              <p><span>{{ $book->price }}</span> €</p>
+                              <button type="button">buy now</button>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      </body>
                         <!---  reikia graziai kad atrodytu cia rodo visas knygas -->
                         <div class="mb-4 ">
                             <p class="mb-2">
@@ -97,7 +54,7 @@
                                 <br> Knygos būklė:{{ $book->status }}
                                 <br> Kaina:{{ $book->price }}
                             </p>
-                            <img src="{{ asset('/images/' . $book->image) }}" alt="">
+                            
                         </div>
                         @auth
                             <!---  reikia graziai kad atrodytu cias paspausti kad patiko ar ne -->
@@ -120,7 +77,7 @@
                             </div>
 
                         @endauth
-
+                                   
                     @endforeach
                     {{ $books->links() }}
                 @else

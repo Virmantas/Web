@@ -10,7 +10,7 @@ class LikedPostController extends Controller
 {
     public function store(Post $post,Request $request)
     {
-        dd($post->likedBy($request->user()));
+       // dd($post->likedBy($request->user()));
         $post->Likedposts()->create([
             'user_id'=>$request->user()->id
             
