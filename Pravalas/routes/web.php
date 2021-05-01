@@ -9,12 +9,13 @@ use App\Http\Controllers\HelpController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LikedPostController;
 use App\Http\Controllers\PostController;
+use Illuminate\Database\Schema\PostgresSchemaState;
 
 Route::get('/',[PostController::class,'index'])->name('home');
 
 Route::get('/books',[PostController::class,'find'])->name('find');
 
-Route::get('/bookss',[PostController::class,'findByCategory'])->name('findCategory');
+Route::get('/category',[PostController::class,'findByCategory'])->name('findCategory');
 
 Route::get('/register',[RegisterController::class,'index'])->name('register');
 
@@ -36,7 +37,7 @@ Route::get('/test',[PostController::class,'show'])->name('test');
 
 Route::post('/insert',[PostController::class,'store']);
 
-Route::post('/test/{post}/likes',[LikedPostController::class,'store']);
+Route::post('/books/{post}/likes',[LikedPostController::class,'store'])->name('likes');
 
 
 

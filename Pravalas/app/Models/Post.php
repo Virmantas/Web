@@ -21,6 +21,11 @@ class Post extends Model
         'image'
     ];
 
+    public function likedBy(User $user)
+    {
+        return $this->Likedposts->contains('user_id',$user->id);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

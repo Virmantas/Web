@@ -8,8 +8,13 @@ use ReflectionFunctionAbstract;
 
 class LikedPostController extends Controller
 {
-    public function store(Post $post)
+    public function store(Post $post,Request $request)
     {
-        dd($post);
+        dd($post->likedBy($request->user()));
+        $post->Likedposts()->create([
+            'user_id'=>$request->user()->id
+            
+        ]);
+        return back();
     }
 }

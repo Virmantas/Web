@@ -11,22 +11,15 @@ use function PHPUnit\Framework\isEmpty;
 
 class PostController extends Controller
 {
-    private $pageCount=5;
+    private $pageCount=9;
     
-    public function index($value=null)
+    public function index()
     {
-        
         $books = Post::with(['user'])->paginate($this->pageCount);
-        if($value==null)
-        {
+       
             return view('home',[
-            'books' => $books
+            'books' => $books,
         ]);
-        }
-        else
-        {
-            return $books;
-        }
     }
     
 
@@ -84,27 +77,10 @@ class PostController extends Controller
 
     public function findByCategory(Request $request)
     {
-    $books=array();
-    
-        foreach ($request->option as $option)
-        {
-            $results=Post::with(['user'])->where('category',$option)->paginate($this->pageCount);
-            if(isEmpty($request))
-            {
-                //foreach($results as $result)
-                array_push($books,$results);   
-            
-        }
-        }
-        //dd($books);
-        //dd($books);
+        $books=Post::with(['user'])->where('category',$request->category)->paginate($this->pageCount);
         return view('home',[
-            'books' => $books]);
+            'books'=>$books
+        ]);
+
     }
-/*
-    public function destroy(Book $book)
-    {
-        //
-    }
-    */
 }

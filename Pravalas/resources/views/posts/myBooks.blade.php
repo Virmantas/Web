@@ -27,7 +27,7 @@
                         <img src="{{ asset('/images/' . $book->image) }}" alt="">
                     </div>
                     <div>
-                        <form action="" method="post" clas></form>
+
                     </div>
                 @endforeach
                 {{ $books->links() }}
