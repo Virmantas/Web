@@ -40,4 +40,4 @@ Route::post('/insert',[PostController::class,'store']);
 Route::post('/books/{post}/likes',[LikedPostController::class,'store'])->name('likes');
 
 
-
+Route::get('/likedBooks',[LikedPostController::class,'liked'])->name('liked');

@@ -8,9 +8,7 @@
 @section('MainPage')
     <div class="wrapper flex justify-center ">
         <div class="w-4/12 bg-white justify-center  rounded-lg my-36">
-          
-
-            @if ($books->count())
+           
             @foreach ($books as $book)
 
             <body>
@@ -21,10 +19,11 @@
                   </div>
                   <div class="product-info">
                     <div class="product-text">
-                       <br>
+                       
                       <h1>{{ $book->name }}</h1>
                       
                       <h2>{{ $book->author }}</h2>
+                      
                       <h3>Knygos Kategorija: {{ $book->category }}</h3>
                       <h3>Knygos būklė: {{ $book->status }}</h3>
                     </div>
@@ -52,10 +51,8 @@
                 @endauth
                            
             @endforeach
-            {{ $books->links() }}
-        @else
-            Sąrašas yra tuščias
-        @endif
+            
+       
         </div>
         @yield('test');
 

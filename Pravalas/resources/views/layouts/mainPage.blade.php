@@ -26,8 +26,7 @@
                     <form action="{{ route('findCategory') }}" method="get">
                         <button name="category" value="Drama" type="submit">Drama</button>
                         <br>
-                        <button formaction="{{ 'findCategory' }}" name="category" value="Tikros istorijos"
-                            type="submit">Tikros istorijos</button>
+                        
                         <button name="category" value="Meilės istorijos" type="submit">Meilės istorijos</button>
                         <button name="category" value="Erotinės knygos" type="submit">Erotinės knygos</button>
                         <button name="category" value="Meilės romanai" type="submit">Meilės romanai</button>

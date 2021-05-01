@@ -46,15 +46,22 @@
                 @endguest
                 @auth
                     <li class="flex items-center">
-                        <button class="BookUser">
+                        <form action="{{ route('liked') }}" method="get" class="inline">
+                            @csrf
+                        <button type="submit" class="BookUser">
                             <img src="bookuser.png" alt="">
                         </button>
+                       </form>
+                       <form>
                         <button class="Mail">
                             <img src="mail.png" alt="">
                         </button>
+                        </form>
+                        <form>
                         <button class="User">
                             <img src="useris.png" alt="">
                         </button>
+                        </form>
                         <form action="{{ route('logout') }}" method="post" class="inline">
                             @csrf
                             <button type="submit" class="Logout">

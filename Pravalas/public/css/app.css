@@ -348,8 +348,7 @@ margin-bottom: 77px
 }
 
 .product-text h1 {
-  margin: 0 0 0 38px;
-  padding-top: 15px;
+  margin: -17px 0 0 38px;
   font-size: 24px;
   color: #474747;
 }
@@ -12911,6 +12910,10 @@ video {
 
 .mr-1 {
   margin-right: 0.25rem;
+}
+.like {
+  margin-left: 170px;
+  margin-top: 5px;
 }
 
 .mb-1 {
