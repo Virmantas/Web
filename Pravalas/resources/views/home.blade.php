@@ -46,6 +46,9 @@
 
                                         @endif
                                     @endauth
+                                    @guest
+                                        <br>
+                                    @endguest
                                     <h1>{{ $book->name }}</h1>
 
                                     <h2>{{ $book->author }}</h2>
