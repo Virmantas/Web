@@ -25,12 +25,11 @@
                       <h1>{{ $book->name }}</h1>
                       
                       <h2>{{ $book->author }}</h2>
-                      <h3>Knygos Kategorija: {{ $book->category }}</h3>
-                      <h3>Knygos būklė: {{ $book->status }}</h3>
+                        <h3><button><img src="location.png" alt="" width="16 px" height="16px"></button>
+                        {{ $book->wheretostore }}</h3>
                     </div>
                     <div class="product-price-btn">
                       <p><span>{{ $book->price }}</span> €</p>
-                      <button type="button">buy now</button>
                     </div>
                   </div>
                 </div>

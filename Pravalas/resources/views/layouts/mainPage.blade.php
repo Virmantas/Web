@@ -28,11 +28,11 @@
                         <br>
                         
                         <button name="category" value="Meilės istorijos" type="submit">Meilės istorijos</button>
+                        <button name="category" value="Grožinė literatūra" type="submit">Grožinė literatūra</button>
                         <button name="category" value="Erotinės knygos" type="submit">Erotinės knygos</button>
                         <button name="category" value="Meilės romanai" type="submit">Meilės romanai</button>
                         <button name="category" value="Tikros istorijos" type="submit">Tikros istorijos</button>
                         <button name="category" value="Meilės istorijos" type="submit">Meilės istorijos</button>
-                        <button name="category" value="Erotinės knygos" type="submit">Erotinės knygos</button>
                     </form>
                 </ul>
             </div>
