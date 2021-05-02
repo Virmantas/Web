@@ -35,28 +35,9 @@
                 </div>
               
               </body>
-                <!---  reikia graziai kad atrodytu cia rodo visas knygas -->
-               
-                @auth
-                    <!---  reikia graziai kad atrodytu cias paspausti kad patiko ar ne -->
-                    <div class="flex items-center text-white">
-                        
-                        
-
-                       
-
-                       
-                    </div>
-
-                @endauth
-                           
-            @endforeach
-            
-       
-        </div>
-        @yield('test');
-
-    </div>
+              @endforeach
+            </div>
+      </div>
 
     </body>
 @endsection

@@ -33,7 +33,7 @@ Route::get('/insert',[PostController::class,'create'])->name('insert');
 
 Route::get('/test',[PostController::class,'show'])->name('test');
 Route::post('/insert',[PostController::class,'store']);
-Route::delete('/books',[PostController::class,'destroy']);
+Route::delete('/{post}',[PostController::class,'destroy'])->name('posts.destroy');
 
 Route::post('/books/{post}/likes',[LikedPostController::class,'store'])->name('likes');
 Route::delete('/books/{post}/likes',[LikedPostController::class,'destroy'])->name('likes');

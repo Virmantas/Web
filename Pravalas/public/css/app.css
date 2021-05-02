@@ -12915,6 +12915,15 @@ video {
   margin-left: 170px;
   margin-top: 5px;
 }
+.deletePost {
+  margin-left: 15px;
+  margin-top: -40px;
+  color: rgb(165, 7, 7);
+  font-family: 'Bentham', serif;
+}
+.deletePost button:hover {
+  color: #de7878;
+}
 
 .mb-1 {
   margin-bottom: 0.25rem;

@@ -36,10 +36,10 @@
                     </button>
                     <li style="justify-items: flex-end">
 
-                        <a href="{{ 'login' }}" class="LogButton" ;>
+                        <a href="{{ 'login' }}" class="LogButton" >
                             Prisijungti
                         </a>
-                        <a href="{{ 'register' }}" class="RegButton" ;>
+                        <a href="{{ 'register' }}" class="RegButton" >
                             Registruotis
                         </a>
                     </li>

@@ -46,6 +46,13 @@
                                             </form>
 
                                         @endif
+                                        @if ($book->ownedBy(auth()->user()))
+                                        <form action="{{ route('posts.destroy', $book) }}" method="post" class="deletePost">
+                                            @csrf
+                                            @method('DELETE') 
+                                            <button type="submit" class="">šalinti</button>
+                                        </form>
+                                        @endif
                                     @endauth
                                     @guest
                                         <br>
@@ -56,14 +63,14 @@
                                     <h3>{{ $book->user->name }}</h3>
                                     <h3>Knygos Kategorija: {{ $book->category }}</h3>
                                     <h3>Knygos būklė: {{ $book->status }}</h3>
-                                    
                                 </div>
+                              
+                                
                                
                                 <div class="product-price-btn">
                                     <p><span>{{ $book->price }}</span> €</p>
                                     <button type="button">buy now</button>
                                 </div>
-                                
                             </div>
                         </div>
 
