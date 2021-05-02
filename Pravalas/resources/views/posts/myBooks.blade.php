@@ -32,7 +32,7 @@
                                     </div>
                                     <div class="product-price-btn">
                                         <p><span>{{ $book->price }}</span> €</p>
-                                        <button type="button">TEIRAUIS</button>
+                                        <button type="button">TEIRAUTIS</button>
                                     </div>
                                 </div>
                             </div>
