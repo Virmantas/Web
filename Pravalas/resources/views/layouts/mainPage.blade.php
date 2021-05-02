@@ -26,13 +26,24 @@
                     <form action="{{ route('findCategory') }}" method="get">
                         <button name="category" value="Drama" type="submit">Drama</button>
                         <br>
-                        
-                        <button name="category" value="Meilės istorijos" type="submit">Meilės istorijos</button>
                         <button name="category" value="Grožinė literatūra" type="submit">Grožinė literatūra</button>
-                        <button name="category" value="Erotinės knygos" type="submit">Erotinės knygos</button>
+                        </br>
+                        <button name="category" value="Vaikams" type="submit">Vaikams</button>     
+                        <br>             
+                        <button name="category" value="Istorija" type="submit">Istorija</button>
+                        </br>
+                        <button name="category" value="Detektyvai" type="submit">Detektyvai</button>
+                        <br>
+                        <button name="category" value="Fantastika" type="submit">Fantastika</button>
+                        </br>
+                        <button name="category" value="Psichologija" type="submit">Psichologija</button>
+                        <br>
                         <button name="category" value="Meilės romanai" type="submit">Meilės romanai</button>
-                        <button name="category" value="Tikros istorijos" type="submit">Tikros istorijos</button>
-                        <button name="category" value="Meilės istorijos" type="submit">Meilės istorijos</button>
+                        </br>
+                        <button name="category" value="Pomėgiai" type="submit">Pomėgiai</button>
+                        <br>
+                        <button name="category" value="Biografijos" type="submit">Biografijos</button>
+                        </br>
                     </form>
                 </ul>
             </div>
