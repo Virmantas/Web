@@ -19,7 +19,7 @@
                   </div>
                   <div class="product-info">
                     <div class="product-text">
-                       
+                       <br>
                       <h1>{{ $book->name }}</h1>
                       
                       <h2>{{ $book->author }}</h2>

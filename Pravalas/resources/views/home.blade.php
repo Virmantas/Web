@@ -30,15 +30,16 @@
                                 <div class="product-text">
                                     @auth
                                         @if (!$book->likedBy(auth()->user()))
-                                            <form action="{{ route('likes', $book->id) }}" method="post" class="like">
+                                            <form action="{{ route('likes', $book) }}" method="post" class="like">
                                                 @csrf
                                                 <button type="submit" class="">
                                                     <img src="unlike.png">
                                                 </button>
                                             </form>
                                         @else
-                                            <form action="{{ route('likes', $book->id) }}" method="post" class="like">
+                                            <form action="{{ route('likes', $book) }}" method="post" class="like">
                                                 @csrf
+                                                @method('DELETE') 
                                                 <button type="submit" class="">
                                                     <img src="like.png">
                                                 </button>
@@ -55,11 +56,14 @@
                                     <h3>{{ $book->user->name }}</h3>
                                     <h3>Knygos Kategorija: {{ $book->category }}</h3>
                                     <h3>Knygos būklė: {{ $book->status }}</h3>
+                                    
                                 </div>
+                               
                                 <div class="product-price-btn">
                                     <p><span>{{ $book->price }}</span> €</p>
                                     <button type="button">buy now</button>
                                 </div>
+                                
                             </div>
                         </div>
 

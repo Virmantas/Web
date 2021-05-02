@@ -31,4 +31,11 @@ class LikedPostController extends Controller
             'books' => $books
         ]);
     }
+    public function destroy(Post $post,Request $request)
+    {
+       $request->user()->Likedposts()->where('post_id', $post->id)->delete();
+       return back();
+
+    }
+
 }

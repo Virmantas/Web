@@ -18,13 +18,11 @@ Route::get('/books',[PostController::class,'find'])->name('find');
 Route::get('/category',[PostController::class,'findByCategory'])->name('findCategory');
 
 Route::get('/register',[RegisterController::class,'index'])->name('register');
-
 Route::post('/register',[RegisterController::class,'store']);
 
 Route::post('/logout',[Logoutcontroller::class,'store'])->name('logout');
 
 Route::get('/login',[Logincontroller::class,'Login'])->name('login');
-
 Route::post('/login',[Logincontroller::class,'store']);
 
 Route::get('/help',[HelpController::class,'help'])->name('help');
@@ -34,10 +32,11 @@ Route::get('/about',[AboutController::class,'about'])->name('about');
 Route::get('/insert',[PostController::class,'create'])->name('insert');
 
 Route::get('/test',[PostController::class,'show'])->name('test');
-
 Route::post('/insert',[PostController::class,'store']);
+Route::delete('/books',[PostController::class,'destroy']);
 
 Route::post('/books/{post}/likes',[LikedPostController::class,'store'])->name('likes');
-
-
+Route::delete('/books/{post}/likes',[LikedPostController::class,'destroy'])->name('likes');
 Route::get('/likedBooks',[LikedPostController::class,'liked'])->name('liked');
+
+
