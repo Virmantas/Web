@@ -22,10 +22,16 @@ class LikedPostController extends Controller
     }
     public function liked()
     {
-        //dd(auth()->id());
-        $id=auth()->id();
-        $books = DB::select("select * from posts inner join likedposts on likedposts.user_id =$id");
-
+       /* $books=DB::table('posts')->join('likedposts',function($join)
+        {
+            $join->on('likedposts.post_id','=','posts.id');
+        })->where('likedposts.user_id',auth()->id());//->paginate(5);
+*/
+        //$books=Post::with(['likeposts'])->where('post_id','likeposts.post_id')->paginate($this->pageCount);
+        $books =Post::with(['user'])->join('likedposts',function($join)
+        {   
+            $join->on('likedposts.post_id','=','posts.id');
+        })->where('likedposts.user_id',auth()->id())->paginate(5);
         //dd($books);
         return view('posts.likedBooks',[
             'books' => $books

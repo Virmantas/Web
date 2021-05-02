@@ -11,17 +11,17 @@
     <nav class=" flex items-center">
         <img style="margin:auto" src=" your.png" alt="">
     </nav>
-    <div class="container flex justify-between" style=" align-items: left; margin-left:10%;">
-
-
-    </div>
-    <div class="flex justify-between">
-        <div>
+    <div>
+        <div class="flex items-center place-content-around">
             @if ($books->count())
+                <?php $numberrow = 0; ?>
                 @foreach ($books as $book)
+                    @if ($numberrow % 3 == 0 && $numberrow != 0)
+                        <div class="flex items-center place-content-around">
+                    @endif
 
                     <body>
-                        <div class="wrapper1">
+                        <div class="wrapper1 ">
                             <div class="product-img">
                                 <img src="{{ asset('/images/' . $book->image) }}" height="380" width="294">
 
@@ -39,7 +39,7 @@
                                         @else
                                             <form action="{{ route('likes', $book) }}" method="post" class="like">
                                                 @csrf
-                                                @method('DELETE') 
+                                                @method('DELETE')
                                                 <button type="submit" class="">
                                                     <img src="like.png">
                                                 </button>
@@ -47,11 +47,12 @@
 
                                         @endif
                                         @if ($book->ownedBy(auth()->user()))
-                                        <form action="{{ route('posts.destroy', $book) }}" method="post" class="deletePost">
-                                            @csrf
-                                            @method('DELETE') 
-                                            <button type="submit" class="">šalinti</button>
-                                        </form>
+                                            <form action="{{ route('posts.destroy', $book) }}" method="post"
+                                                class="deletePost">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="">šalinti</button>
+                                            </form>
                                         @endif
                                     @endauth
                                     @guest
@@ -60,14 +61,15 @@
                                     <h1>{{ $book->name }}</h1>
 
                                     <h2>{{ $book->author }}</h2>
-                                    <h3><button><img src="user_bookcard.png" alt="" width="16 px" height="16px"></button>
-                                    {{ $book->user->name }}</h3>
+                                    <h3><button><img src="user_bookcard.png" alt="" width="16 px"
+                                                height="16px"></button>
+                                        {{ $book->user->name }}</h3>
                                     <h3><button><img src="location.png" alt="" width="16 px" height="16px"></button>
-                                    {{ $book->wheretostore }}</h3>
+                                        {{ $book->wheretostore }}</h3>
                                 </div>
-                              
-                                
-                               
+
+
+
                                 <div class="product-price-btn">
                                     <p><span>{{ $book->price }}</span> €</p>
                                     <button type="button">TEIRAUIS</button>
@@ -76,29 +78,22 @@
                         </div>
 
                     </body>
-                    <!---  reikia graziai kad atrodytu cia rodo visas knygas -->
+                    <?php
+                    $numberrow++;
+                    if ($numberrow % 3 == 0) {
+                    echo '
+        </div>';
+        }
+        ?>
 
-                    @auth
-                        <!---  reikia graziai kad atrodytu cias paspausti kad patiko ar ne -->
-                        <div class="flex items-center text-white">
-
-
-
-
-
-
-                        </div>
-
-                    @endauth
-
-                @endforeach
-                {{ $books->links() }}
-            @else
-                Sąrašas yra tuščias
-            @endif
-        </div>
-
+        @endforeach
+        {{ $books->links() }}
+    @else
+        Sąrašas yra tuščias
+        @endif
     </div>
+
+</div>
 </div>
 </div>
 </body>
