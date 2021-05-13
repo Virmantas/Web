@@ -36,10 +36,10 @@
                     </button>
                     <li style="justify-items: flex-end">
 
-                        <a href="{{ 'login' }}" class="LogButton" >
+                        <a href="{{ 'login' }}" class="LogButton">
                             Prisijungti
                         </a>
-                        <a href="{{ 'register' }}" class="RegButton" >
+                        <a href="{{ 'register' }}" class="RegButton">
                             Registruotis
                         </a>
                     </li>
@@ -48,19 +48,15 @@
                     <li class="flex items-center">
                         <form action="{{ route('liked') }}" method="get" class="inline">
                             @csrf
-                        <button type="submit" class="BookUser">
-                            <img src="bookuser.png" alt="">
-                        </button>
-                       </form>
-                       <form>
-                        <button class="Mail">
-                            <img src="mail.png" alt="">
-                        </button>
+                            <button type="submit" class="BookUser">
+                                <img src="bookuser.png" alt="">
+                            </button>
                         </form>
-                        <form>
-                        <button class="User">
-                            <img src="useris.png" alt="">
-                        </button>
+                        <form action="{{ route('user.update') }}" method="post">
+                            @csrf
+                            <button type="submit" class="User">
+                                <img src="useris.png" alt="">
+                            </button>
                         </form>
                         <form action="{{ route('logout') }}" method="post" class="inline">
                             @csrf

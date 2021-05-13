@@ -24,6 +24,7 @@ Route::post('/logout',[Logoutcontroller::class,'store'])->name('logout');
 
 Route::get('/login',[Logincontroller::class,'Login'])->name('login');
 Route::post('/login',[Logincontroller::class,'store']);
+Route::post('/login/update',[Logincontroller::class,'getUsersCredentials'])->name('user.update');
 
 Route::get('/help',[HelpController::class,'help'])->name('help');
 
