@@ -31,9 +31,7 @@
             <ul class="flex items-center">
 
                 @guest
-                    <button style="Book">
-                        <img src="book.png" alt="" width="50 px" height="50px">
-                    </button>
+                    
                     <li style="justify-items: flex-end">
 
                         <a href="{{ 'login' }}" class="LogButton">
@@ -52,7 +50,7 @@
                                 <img src="bookuser.png" alt="">
                             </button>
                         </form>
-                        <form action="{{ route('user.update') }}" method="post">
+                        <form action="{{ route('user.update', auth()->id()) }}" method="get">
                             @csrf
                             <button type="submit" class="User">
                                 <img src="useris.png" alt="">

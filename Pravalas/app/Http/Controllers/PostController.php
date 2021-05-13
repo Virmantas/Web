@@ -110,4 +110,13 @@ class PostController extends Controller
         $book->save();
         return back();
     }
+    public function aboutBookById(Request $request)
+    {
+        $books = Post::with(['user'])->where('id', $request->id)->paginate($this->pageCount);
+        //dd($books);
+       
+        return view('posts.infoAboutBook',[
+            'books'=>$books
+        ]);
+    }
 }

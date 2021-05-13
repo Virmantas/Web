@@ -24,7 +24,9 @@ Route::post('/logout',[Logoutcontroller::class,'store'])->name('logout');
 
 Route::get('/login',[Logincontroller::class,'Login'])->name('login');
 Route::post('/login',[Logincontroller::class,'store']);
-Route::post('/login/update',[Logincontroller::class,'getUsersCredentials'])->name('user.update');
+Route::get('/update',[Logincontroller::class,'getUsersCredentials'])->name('user.update');
+Route::post('/update',[Logincontroller::class,'setUsersCredentials']);
+
 
 Route::get('/help',[HelpController::class,'help'])->name('help');
 
@@ -35,6 +37,7 @@ Route::get('/insert',[PostController::class,'create'])->name('insert');
 Route::get('/test',[PostController::class,'show'])->name('test');
 Route::post('/insert',[PostController::class,'store']);
 Route::delete('/{post}',[PostController::class,'destroy'])->name('posts.destroy');
+Route::get('/info',[PostController::class,'aboutBookById'])->name('posts.info');
 
 Route::get('/change',[PostController::class,'getBookById'])->name('post.edit');
 Route::post('/change',[PostController::class,'storeBooks']);

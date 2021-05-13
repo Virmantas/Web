@@ -75,7 +75,10 @@
                                 </div>
                                 <div class="product-price-btn">
                                     <p><span>{{ $book->price }}</span> €</p>
-                                    <button type="submit">PLAČIAU</button>
+                                    <form action="{{ route('posts.info') }}" method="get" >
+                                        <textarea name="id" id="id" cols="30" rows="10" hidden>{{ $book->id }}</textarea>
+                                        <button type="submit">PLAČIAU</button>
+                                    </form>
 
                                 </div>
                             </div>
