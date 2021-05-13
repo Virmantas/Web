@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use Illuminate\Database\Console\WipeCommand;
 use Illuminate\Support\Facades\DB;
 
 use function PHPUnit\Framework\isEmpty;
@@ -16,7 +17,6 @@ class PostController extends Controller
     public function index()
     {
         $books = Post::with(['user'])->paginate($this->pageCount);
-       
             return view('home',[
             'books' => $books,
         ]);
@@ -61,7 +61,7 @@ class PostController extends Controller
 
     public function show()
     {
-        $books = DB::table('posts')->where('user_id',auth()->id())->paginate($this->pageCount);
+        $books = Post::with(['user'])->where('user_id',auth()->id())->paginate($this->pageCount);
         
         return view('posts.myBooks',[
             'books' => $books
@@ -70,6 +70,7 @@ class PostController extends Controller
 
     public function find(Request $request)
     {
+        
         $books=Post::with(['user'])->where('name',$request->book)->paginate($this->pageCount);
         return view('home',[
             'books' => $books]);
@@ -86,6 +87,27 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
+        return back();
+    }
+
+    public function getBookById(Request $request)
+    {
+        $books = Post::with(['user'])->where('id',(int)$request->book)->paginate($this->pageCount);
+        return view('posts.changeBook',[
+            'books'=>$books
+        ]);
+    }
+    public function storeBooks(Request $request)
+    {
+        $book= Post::find($request->id);
+
+        $book->name=$request->name;
+        $book->category=$request->category;
+        $book->author=$request->author;
+        $book->status=$request->status;
+        $book->price=$request->price;
+        $book->wheretostore=$request->wheretostore;
+        $book->save();
         return back();
     }
 }

@@ -35,6 +35,9 @@ Route::get('/test',[PostController::class,'show'])->name('test');
 Route::post('/insert',[PostController::class,'store']);
 Route::delete('/{post}',[PostController::class,'destroy'])->name('posts.destroy');
 
+Route::get('/change',[PostController::class,'getBookById'])->name('post.edit');
+Route::post('/change',[PostController::class,'storeBooks']);
+
 Route::post('/books/{post}/likes',[LikedPostController::class,'store'])->name('likes');
 Route::delete('/books/{post}/likes',[LikedPostController::class,'destroy'])->name('likes');
 Route::get('/likedBooks',[LikedPostController::class,'liked'])->name('liked');

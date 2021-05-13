@@ -27,7 +27,7 @@
 
                             </div>
                             <div class="product-info">
-                                <div class="product-text">
+                                <div class="product-text ">
                                     @auth
                                         @if (!$book->likedBy(auth()->user()))
                                             <form action="{{ route('likes', $book) }}" method="post" class="like">
@@ -48,10 +48,16 @@
                                         @endif
                                         @if ($book->ownedBy(auth()->user()))
                                             <form action="{{ route('posts.destroy', $book) }}" method="post"
-                                                class="deletePost">
+                                                class="deletePost ">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="">šalinti</button>
+                                                <button type="submit" class="">Šalinti</button>
+                                            </form>
+                                            <form action="{{ route('post.edit') }}" method="get"
+                                                class=" deletePost ml-20 ">
+                                                @csrf
+                                                <textarea name="book" hidden>{{ $book->id }}</textarea>
+                                                <button type="submit">Redaguoti</button>
                                             </form>
                                         @endif
                                     @endauth
@@ -67,12 +73,10 @@
                                     <h3><button><img src="location.png" alt="" width="16 px" height="16px"></button>
                                         {{ $book->wheretostore }}</h3>
                                 </div>
-
-
-
                                 <div class="product-price-btn">
                                     <p><span>{{ $book->price }}</span> €</p>
-                                    <button type="button">PLAČIAU</button>
+                                    <button type="submit">PLAČIAU</button>
+
                                 </div>
                             </div>
                         </div>

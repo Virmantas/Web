@@ -22,9 +22,23 @@
                                     <img src="{{ asset('/images/' . $book->image) }}" height="380" width="294">
 
                                 </div>
+
                                 <div class="product-info">
+
                                     <div class="product-text">
-                                        <br>
+
+                                        <br> <br>
+                                        <form action="{{ route('posts.destroy', $book) }}" method="post"
+                                            class="deletePost ">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="">Šalinti</button>
+                                        </form>
+                                        <form action="{{ route('post.edit') }}" method="get" class=" deletePost ml-20">
+                                            @csrf
+                                            <textarea name="book" hidden>{{ $book->id }}</textarea>
+                                            <button type="submit">Redaguoti</button>
+                                        </form>
                                         <h1>{{ $book->name }}</h1>
                                         <h2>{{ $book->author }}</h2>
                                         <h3><button><img src="location.png" alt="" width="16 px" height="16px"></button>
