@@ -41,15 +41,15 @@ class Logincontroller extends Controller
     {
         if($request->password != null)
         $this->validate($request, [
-            'name' => 'required|max:255',
-            'username' => 'required|max:255',
+            'name' => 'required|max:20',
+            'username' => 'required|max:30',
             'email' => 'required|email|max:255',
             'password' => 'required|confirmed'
         ]);
         else
         $this->validate($request, [
-            'name' => 'required|max:255',
-            'username' => 'required|max:255',
+            'name' => 'required|max:20',
+            'username' => 'required|max:30',
             'email' => 'required|email|max:255'
         ]);
 

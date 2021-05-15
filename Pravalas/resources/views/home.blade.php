@@ -29,22 +29,27 @@
                             <div class="product-info">
                                 <div class="product-text ">
                                     @auth
-                                        @if (!$book->likedBy(auth()->user()))
-                                            <form action="{{ route('likes', $book) }}" method="post" class="like">
-                                                @csrf
-                                                <button type="submit" class="">
-                                                    <img src="unlike.png">
-                                                </button>
-                                            </form>
-                                        @else
-                                            <form action="{{ route('likes', $book) }}" method="post" class="like">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="">
-                                                    <img src="like.png">
-                                                </button>
-                                            </form>
+                                        @if ($book->user->id != auth()->user()->id)
+                                            @if (!$book->likedBy(auth()->user()))
+                                                <form action="{{ route('likes', $book) }}" method="post" class="like">
+                                                    @csrf
+                                                    <button type="submit" class="">
+                                                        <img src="unlike.png">
+                                                    </button>
+                                                </form>
+                                            @else
+                                                <form action="{{ route('likes', $book) }}" method="post" class="like">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="">
+                                                        <img src="like.png">
+                                                    </button>
+                                                </form>
 
+                                            @endif
+                                        @else
+                                            <br>
+                                            <br>
                                         @endif
                                         @if ($book->ownedBy(auth()->user()))
                                             <form action="{{ route('posts.destroy', $book) }}" method="post"
@@ -75,8 +80,9 @@
                                 </div>
                                 <div class="product-price-btn">
                                     <p><span>{{ $book->price }}</span> €</p>
-                                    <form action="{{ route('posts.info') }}" method="get" >
-                                        <textarea name="id" id="id" cols="30" rows="10" hidden>{{ $book->id }}</textarea>
+                                    <form action="{{ route('posts.info') }}" method="get">
+                                        <textarea name="id" id="id" cols="30" rows="10"
+                                            hidden>{{ $book->id }}</textarea>
                                         <button type="submit">PLAČIAU</button>
                                     </form>
 
