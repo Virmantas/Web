@@ -47,14 +47,10 @@
         									<p>Autorius: {{$book->author}}</p>
         									<p>Knygos būklė: {{$book->status}} </p>
                                             <p>Knyga yra iš: {{$book->wheretostore}} </p>
+											<p>Knygos kategorija: {{$book->category}}</p>
         								</div>
         								
-										<div class="product_meta">
-											<span class="posted_in">Kategorija: 
-												<a href="#">{{$book->category}}</a>, 
 										
-											</span>
-										</div>
 										
         							</div>
         						</div>
