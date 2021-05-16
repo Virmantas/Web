@@ -305,6 +305,24 @@ margin-bottom: 77px
   margin-right: 1.6%;
 }
 
+.product__info__main .product__overview {
+  border-top: 1px solid #ebebeb;
+  clear: both;
+  line-height: 24px;
+  margin: 20px 0 0;
+  padding: 10px 0; }
+ .product__info__main .product__overview p {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.product__info__main .product__overview .pro__attribute li {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 /* 
 * Design by Robert Mayer:https://goo.gl/CJ7yC8
 *
@@ -416,8 +434,9 @@ span {
   margin-top: 10px;
   font-size: 25px;
   font-weight: bold;
-  margin-left: 50px;
+  margin-left: 40px;
 }
+
 
 .product-price-btn button {
   display: inline-block;

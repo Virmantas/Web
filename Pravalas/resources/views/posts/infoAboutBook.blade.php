@@ -7,61 +7,46 @@
 
 @section('MainPage')
 
-<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootFstrap.min.css">
-	<link rel="stylesheet" href="css/plugins.css">
-    <link rel="stylesheet" href="{{ asset('css/book.css') }}">
+    @foreach ($books as $book)
 
-	<!-- Cusom css -->
-   <link rel="stylesheet" href="css/custom.css">
+        <div class="col-lg-6 col-12" style="width:300px; margin:auto;">
+            <div class="product__info__main">
+                <h1 class="mb-0.5 text-3xl font-semibold"> {{ $book->name }}</h1>
+                <img src="{{ asset('/images/' . $book->image) }}" height="380" width="294">
+                <div class="product-reviews-summary d-flex">
+                    <ul class="rating-summary d-flex">
+                        <li><i class="zmdi zmdi-star-outline"></i></li>
+                        <li><i class="zmdi zmdi-star-outline"></i></li>
+                        <li><i class="zmdi zmdi-star-outline"></i></li>
+                        <li class="off"><i class="zmdi zmdi-star-outline"></i></li>
+                        <li class="off"><i class="zmdi zmdi-star-outline"></i></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <span class="font-semibold">Knygos kaina: {{ $book->price }}€ </span>
+                </div>
+                <div class="product__overview ">
+                </div>
+                <div class="mb-12">
+                    <p> <b>Autorius:</b> {{ $book->author }}</p>
+                    <p> <b>Knygos būklė:</b> {{ $book->status }} </p>
+                    <p><b>Knyga yra iš:</b> {{ $book->wheretostore }} </p>
+                    <p><b>Knygos kategorija:</b> {{ $book->category }}</p>
+                </div>
 
-	<!-- Modernizer js -->
-	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
 
 
-
-@foreach ($books as $book)
-    
-    <div class="col-lg-6 col-12" style="width:300px; margin:auto;">
-        							<div class="product__info__main">
-        								<h1> {{ $book->name }}</h1>
-                                        <img src="{{ asset('/images/' . $book->image) }}" height="380" width="294">
-        								<div class="product-reviews-summary d-flex">
-        									<ul class="rating-summary d-flex">
-    											<li><i class="zmdi zmdi-star-outline"></i></li>
-    											<li><i class="zmdi zmdi-star-outline"></i></li>
-    											<li><i class="zmdi zmdi-star-outline"></i></li>
-    											<li class="off"><i class="zmdi zmdi-star-outline"></i></li>
-    											<li class="off"><i class="zmdi zmdi-star-outline"></i></li>
-        									</ul>
-        								</div>
-        								<div class="price-box">
-        									<span>Knygos kaina: {{$book->price}}€ </span>
-        								</div>
-										<div class="product__overview">
-        									<p>Autorius: {{$book->author}}</p>
-        									<p>Knygos būklė: {{$book->status}} </p>
-                                            <p>Knyga yra iš: {{$book->wheretostore}} </p>
-											<p>Knygos kategorija: {{$book->category}}</p>
-        								</div>
-        								
-										
-										
-        							</div>
-        						</div>
-        					</div>
+            </div>
+        </div>
+        </div>
 
 
 
 
 
 
-@endforeach
+    @endforeach
 
 
 
